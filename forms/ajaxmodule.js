@@ -140,3 +140,15 @@ function fileDownload(url, data) {
   window.location.href = url + "?" + jsonParamSerialize(data);
 }
 
+/**
+ * check whether value is null or not
+ * @param value
+ * @returns {boolean}
+ */
+function isNull(value) {
+  let blank_pattern = /^\s+|\s+$/g;
+  if(blank_pattern.test(value)) return true;
+  return !value;
+}
+
+
